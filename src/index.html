@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zereth Mortis Squares</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="instructions">
+    <h3>Click to fill in squares to match your pattern, then click 'Solve!':</h3>
+</div>
+<div class="input"></div>
+<div class="buttons">
+    <button class="solve" onclick="solve()">Solve!</button>
+    <button class="reset" onclick="reset()">Reset</button>
+    <div class="loader"></div>
+</div>
+<div class="message"></div>
+<div class="divider"></div>
+<div class="results">
+    <div id="donate-button-container">
+        <div id="donate-button"></div>
+        <div id="donate-message">
+            <p>If you found this helpful and have money to burn, consider dropping me a tip :)</p>
+        </div>
+        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+        <script>
+            PayPal.Donation.Button({
+                env:'production',
+                hosted_button_id:'CBT63M4LV3XWN',
+                image: {
+                    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                    alt:'Donate with PayPal button',
+                    title:'PayPal - The safer, easier way to pay online!',
+                }
+            }).render('#donate-button');
+        </script>
+    </div>
+
+    <h3>Solution:</h3>
+    <div id="solution"></div>
+    <h3>Example:</h3>
+    <div id="steps"></div>
+</div>
+<script>on_load();</script>
+</body>
+</html>

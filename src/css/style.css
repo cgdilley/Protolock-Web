@@ -1,0 +1,109 @@
+
+body {
+    background-color: steelblue;
+    font-family: sans-serif;
+    padding: 1em;
+}
+
+.instructions h3 {
+    color: white;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+table.board {
+    padding: 0;
+    border: 0.1em black solid;
+    background-color: lightblue;
+    margin: 10px;
+    display: inline-block;
+}
+
+td.square {
+    border: 2px black solid;
+    margin: 2px;
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+}
+
+td.square_off {
+    background-color: #222;
+}
+
+td.square_on {
+    background-color: lightgray;
+}
+
+td.square_selected {
+    border: 0.4em purple solid;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 0.6em 3em;
+}
+
+.divider {
+    height: 1em;
+}
+
+.results h3 {
+    color: white;
+    margin-bottom: 0;
+}
+
+#donate-message {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#donate-message p {
+    color: white;
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#donate-button {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.loader {
+    border: 5px solid white; /* Light grey */
+    border-top: 5px solid darkblue;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message p {
+    font-weight: bold;
+    background-color: lightblue;
+    width: auto;
+    display: inline-block;
+    padding: 1em;
+}
+
+.message p.error {
+    color: red;
+}
+
+.message p.warn {
+    color: darkgoldenrod;
+}
